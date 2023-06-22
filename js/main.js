@@ -52,9 +52,9 @@ toTopEl.addEventListener('click', function () {
 })
 
 
-const fadeEls =document.querySelectorAll('.visual .fade-in');
+const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
-  gsap.to(fadeEl, 1,-{
+  gsap.to(fadeEl, 1, {
     delay: (index + 1) * .7,
     opacity: 1
   });
@@ -91,7 +91,7 @@ new Swiper('.awards .swiper-container', {
   slidesPerView: 5,
   navigation: {
     prevEl: '.awards .swiper-prev',
-    nextel: '.awards .swiper-next'
+    nextEl: '.awards .swiper-next'
   }
 });
 
@@ -140,7 +140,7 @@ const spyEls = document.querySelectorAll('section.scroll-spy');
 spyEls.forEach(function (spyEl) {
   new ScrollMagic
     .Scene({
-      triggerElements: spyEl, // 보여짐 여부를 감시할 요소를 지정
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
       triggerHook: .8,
     })
     .setClassToggle(spyEl, 'show')
